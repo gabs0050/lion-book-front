@@ -2,10 +2,11 @@ import { Routes, Route, Link, Navigate, useLocation } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
 import Cadastro from './pages/Cadastro.jsx'
+import CadastroUsuario from './pages/CadastroUsuario.jsx'
 
 export default function App() {
   const location = useLocation()
-  const isAuthLike = location.pathname === '/login' || location.pathname === '/cadastro'
+  const isAuthLike = ['/login','/cadastro','/cadastro-usuario'].includes(location.pathname)
   return (
     <div className="min-h-screen flex flex-col">
       {!isAuthLike && (
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/cadastro-usuario" element={<CadastroUsuario />} />
         </Routes>
       </main>
     </div>
