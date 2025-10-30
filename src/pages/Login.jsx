@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function Login() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#2047CE] text-white">
@@ -49,9 +50,10 @@ export default function Login() {
             Login
           </button>
 
-          {/* Forgot password */}
-          <div className="mt-1 text-center text-[12px] text-white/85">
-            <a href="#" className="hover:underline">Forgot password?</a>
+          {/* Forgot password + cadastrar-se */}
+          <div className="mt-1 flex items-center justify-center gap-4 text-[14px] text-white/85">
+            <a href="#" className="font-normal hover:underline">Forgot password?</a>
+            <Link to="/cadastro" className="font-normal hover:underline">Sign up</Link>
           </div>
         </form>
       </div>
