@@ -3,10 +3,11 @@ import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
 import Cadastro from './pages/Cadastro.jsx'
 import CadastroUsuario from './pages/CadastroUsuario.jsx'
+import Estoque from './pages/Estoque.jsx'
 
 export default function App() {
   const location = useLocation()
-  const isAuthLike = ['/login','/cadastro','/cadastro-usuario'].includes(location.pathname)
+  const isAuthLike = ['/login','/cadastro','/cadastro-usuario','/estoque'].includes(location.pathname)
   return (
     <div className="min-h-screen flex flex-col">
       {!isAuthLike && (
@@ -17,6 +18,7 @@ export default function App() {
               <Link to="/home" className="hover:underline">Home</Link>
               <Link to="/login" className="hover:underline">Login</Link>
               <Link to="/cadastro" className="hover:underline">Cadastro</Link>
+              <Link to="/estoque" className="hover:underline">Estoque</Link>
             </div>
           </nav>
         </header>
@@ -28,6 +30,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/cadastro-usuario" element={<CadastroUsuario />} />
+          <Route path="/estoque" element={<Estoque />} />
         </Routes>
       </main>
     </div>
