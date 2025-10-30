@@ -7,7 +7,7 @@ import Estoque from './pages/Estoque.jsx'
 
 export default function App() {
   const location = useLocation()
-  const isAuthLike = ['/login','/cadastro','/cadastro-usuario','/estoque'].includes(location.pathname)
+  const isAuthLike = ['/login','/cadastro','/cadastro-usuario','/estoque','/home'].includes(location.pathname)
   return (
     <div className="min-h-screen flex flex-col">
       {!isAuthLike && (
