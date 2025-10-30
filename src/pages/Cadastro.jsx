@@ -5,7 +5,7 @@ export default function Cadastro() {
 
   function onCancelar(e) {
     e.preventDefault()
-    navigate('/home')
+    navigate('/login')
   }
 
   return (
@@ -43,7 +43,7 @@ export default function Cadastro() {
               Cadastrar
             </button>
             <Link
-              to="/home"
+              to="/login"
               onClick={onCancelar}
               className="min-w-[260px] rounded-md bg-white px-8 py-3.5 text-center text-[15px] font-semibold uppercase text-[#2047CE] shadow hover:bg-white/95 active:translate-y-[1px]"
             >
